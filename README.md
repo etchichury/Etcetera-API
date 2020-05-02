@@ -9,3 +9,13 @@ The first step of this application is to be a Todo list.
 - Change/add/delete due date of a task
 - Organize tasks according to priority
 - Send a notification when it is getting close to a due date
+
+## Database modeling
+
+### Task
+
+- ID
+- created at
+- due date
+- title
+- description
