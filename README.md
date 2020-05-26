@@ -15,7 +15,13 @@ The first step of this application is to be a Todo list.
 ### Task
 
 - ID
-- created at
-- due date
 - title
 - description
+- due date
+- created at
+
+### User
+
+- ID
+- name
+- email
