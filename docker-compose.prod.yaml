@@ -2,9 +2,10 @@ version: '3.7'
 
 services:
   api:
+    container_name: etcetera_api
     build:
       context: ./services/api
-      dockerfile: ./services/api/docker/Dockerfile.prod
+      dockerfile: ./docker/Dockerfile.prod
     command: gunicorn --bind 0.0.0.0:5000 manage:app
     expose:
       - 5000
@@ -14,6 +15,7 @@ services:
       - db
 
   db:
+    container_name: etcetera_db
     image: postgres:latest
     volumes:
       - postgres_data:/var/lib/postgresql/data/
@@ -21,6 +23,7 @@ services:
       - ./.env.prod.db
 
   nginx:
+    container_name: etcetera_nginx
     build: ./services/nginx
     ports:
       - 1337:80
