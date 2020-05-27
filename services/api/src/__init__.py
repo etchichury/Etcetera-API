@@ -13,4 +13,6 @@ app.register_blueprint(to_do.to_do_blueprint)
 app.register_blueprint(user.user_blueprint)
 
 
-db = SQLAlchemy(app)
+@app.route("/")
+def index():
+    return "Welcome to the Ecetera API"
